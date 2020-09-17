@@ -15,28 +15,28 @@ namespace LoginCredentials
              * If the login or password are incorrect dispay 'try again'
              
              */
-            Login;
-            Password;
+            string Login;
+            string Password;
             Console.WriteLine("Login: ");
             Login = Console.ReadLine();
             Console.WriteLine("Password: ");
             Password = Console.ReadLine();
 
-            if ((Login == "admin") && (Password == "pass1234"))
+            if ((Login == "admin") && (Password == "user1234"))
             {
                 Console.WriteLine("The login is incorrect.");
             }
-            else if ((Login == "admin") && (Password != "pass1234"))
+            else if ((Login == "admin") && (Password == "pass1234"))
             {
                 Console.WriteLine("The password is incorrect");
             }
-            else if ((Login != "admin") && (Password == "pass1234"))
+            else if ((Login == "user") && (Password == "user1234"))
             {
                 Console.WriteLine("Welcome.");
             }
             else
             {
-                Console.WriteLine("Success!");
+                Console.WriteLine("Invalid credentials!");
             }
         }
     }
